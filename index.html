@@ -77,7 +77,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Moving6DPoSe: A Multi-Camera Database for 6D Pose Estimation and Segmentation of Moving Objects</h1>
+          <h1 class="title is-1 publication-title">Moving6DPoSe: A Multimodal Database for Monocular 6D Pose Estimation and Segmentation of Moving Objects</h1>
           <div class="is-size-5 publication-authors">
 
             <span class="author-block">
@@ -91,9 +91,9 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Department of Electrical Engineering, Universidad de Chile, Chile,</span>
-            <span class="author-block"><sup>2</sup>Advanced Mining Technology Center (AMTC), Universidad de Chile, Chile,</span>
-            <span class="author-block"><sup>3</sup>Institute of Engineering Sciences, Universidad de O'Higgins, Chile</span>
+            <span class="author-block"><sup>1</sup>Department of Electrical Engineering, Universidad de Chile, Santiago, Chile</span>
+            <span class="author-block"><sup>2</sup>Advanced Mining Technology Center (AMTC), Universidad de Chile, Santiago, Chile</span>
+            <span class="author-block"><sup>3</sup>Iniciativa de Datos e Inteligencia Artificial, Universidad de Chile, Santiago, Chilee</span>
           </div>
 
           <div class="column has-text-centered">
@@ -242,19 +242,7 @@
         
         <div class="content has-text-justified">
           <p>
-          We introduce Moving6DPoSe, a novel multi-camera database designed for 6D pose estimation and segmentation of moving objects. 
-          </p>
-
-          <p>
-          This database employs frame and event-based cameras and exploits the capabilities of these neuromorphic sensors by capturing scene changes with high temporal resolution and zero motion blur, even in high dynamic range outdoor environments. 
-          </p>
-
-          <p>
-          The Moving6DPoSe database includes 20 objects with their 3D models and motion data in real and synthetic setups. It consists of two datasets: Moving6DPoSe-R, which captures real-world object motion, and Moving6DPoSe-S, which simulates object motion,  using different motion trajectories in each case. 
-          </p>
-
-          <p>
-          This paper describes the selected vision sensors, the motion scenarios, the data acquisition processes, and the ground truth annotations for segmentation, detection, and 6D pose estimation of the database. Moving6DPoSe will be made available for research purposes.
+          Estimating the 6D pose of moving objects remains challenging due to motion blur and the limited temporal resolution of conventional frame-based cameras. Existing event-based datasets further provide limited sensing modalities, annotations, and motion scenarios. We introduce Moving6DPoSe, a multimodal database comprising two complementary subsets: Moving6DPoSe-R with real-world recordings and Moving6DPoSe-S with synthetic sequences generated from the same objects. The dataset contains 16 scanned objects and 1,702 real and synthetic rosbags spanning multiple motion scenarios, with annotations for semantic segmentation, object detection, and monocular 6D pose estimation. We further provide baseline results for all three tasks across frame and event-based modalities. Experimental results show that event-based representations achieve more robust moving-object segmentation than conventional RGB images, while monocular orientation estimation remains challenging, highlighting the potential of Moving6DPoSe for moving-object perception research.
           </p>
         </div>
         
@@ -306,7 +294,7 @@
 
           <div class="content has-text-justified">
             <p>
-            Twenty different objects are selected to build the dataset, providing varying shapes and textures for depth estimation and spatio-temporal analysis. The object models are shown in Figure 3.
+            16 different objects are selected to build the dataset, providing varying shapes and textures for depth estimation and spatio-temporal analysis. The object models are shown in Figure 3.
             </p>
 
             <p>
@@ -630,49 +618,6 @@
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="rows">
-      <!-- Animation. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Database summary</h2>
-
-
-          <div class="content has-text-justified">
-            <p>
-            The distribution of the real and synthetic Moving6DPoSe partitions is shown in Figure 9 and 10. The real partition (Figure 9) includes scenarios such as “Rotation”, “Pendulum”, “Free Fall”, “Eye-to-Hand Throw” and “Eye-to-Hand Throw”, captured with the 4 vision sensors contributing. The synthetic partitioning (Figure 10) further extends these scenarios, leveraging Blender to generate over 20,000,000 samples.
-
-            </p>
-          </div>
-
-
-          <!-- Flex container for side-by-side images -->
-          <div style="display: flex; justify-content: space-around; align-items: flex-start; margin-top: 20px; gap: 20px;">
-            <!-- First figure -->
-            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; max-width: 45%;">
-              <img src="static/images/moving6dpose_ddbb-r.png" style="width: 100%; height: auto;" alt="Moving6DPoSe-R" />
-              <h2 class="subtitle">
-                <span class="dnerf">Figure 9 - Moving6DPoSe-R quantitative distribution.</span>
-              </h2>
-            </div>
-            <!-- Second figure -->
-            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; max-width: 45%;">
-              <img src="static/images/moving6dpose_ddbb-s.png" style="width: 100%; height: auto;" alt="Moving6DPoSe-S" />
-              <h2 class="subtitle">
-                <span class="dnerf">Figure 10 - Moving6DPoSe-S quantitative distribution.</span>
-              </h2>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container is-max-widescreen">
     <div class="rows">
@@ -765,10 +710,11 @@
     <h2 class="title">BibTeX</h2>
     <pre>
       <code>
-        @misc{bugueno2024robocatch,
-          title={Moving6DPoSe: A Multi-Camera Database for 6D Pose Estimation and Segmentation of Moving Objects}, 
-          author={Bugueno-Cordova, Ignacio and Ruiz-del-Solar, Javier and Verschae, Rodrigo},
-          year={2024},
+        @inproceedings{bugueno2026moving6dpose,
+          title     = {Moving6DPoSe: A Multimodal Database for Monocular 6D Pose Estimation and Segmentation of Moving Objects},
+          author    = {Bugueno-Cordova, Ignacio and Ruiz-del-Solar, Javier and Verschae, Rodrigo},
+          booktitle = {European Conference on Computer Vision Workshops (ECCV-W)},
+          year      = {2026},
         }
       </code>
     </pre>
